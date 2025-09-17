@@ -48,7 +48,10 @@ class ProfesorController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $profesor = Profesor::findOrFail($id);
+        return Inertia::render('profesores/show', [
+            'profesor' => $profesor,
+        ]);
     }
 
     /**

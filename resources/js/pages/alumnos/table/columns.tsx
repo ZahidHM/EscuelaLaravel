@@ -58,7 +58,7 @@ export const columns: ColumnDef<Alumno>[] = [
     id: "acciones",
     size: 50,
     cell: ({ row }) => {
-      const company = row.original
+      const alumno = row.original
       const [open, setOpen] = useState(false);
 
       return (
@@ -72,17 +72,15 @@ export const columns: ColumnDef<Alumno>[] = [
           <DropdownMenuContent align="end">
             <DropdownMenuSeparator />
             <DropdownMenuItem >
-              <Link className="flex w-full items-center" 
-              href=
-              ""
-              // {route('directions.show', company.id)}
+              <Link className="flex w-full items-center"
+                href={route('alumnos.show', alumno.id)}
               >
                 <EyeIcon />
                 Ver
               </Link>
             </DropdownMenuItem>
             <DropdownMenuItem>
-              <Link className="flex w-full items-center" href={route('alumnos.edit', company.id)}>
+              <Link className="flex w-full items-center" href={route('alumnos.edit', alumno.id)}>
 
                 <EditIcon />
                 Editar
@@ -90,14 +88,14 @@ export const columns: ColumnDef<Alumno>[] = [
             </DropdownMenuItem>
             <DropdownMenuItem asChild>
               <DeleteDialog
-                resourceId={company.id}
+                resourceId={alumno.id}
                 routeName="alumnos.destroy"
                 description="Esta acción no se puede deshacer. Se eliminará permanentemente la empresa."
               />
             </DropdownMenuItem>
 
             <DropdownMenuItem
-              onClick={() => navigator.clipboard.writeText(company.nombre)}
+              onClick={() => navigator.clipboard.writeText(alumno.nombre)}
             >
               <Clipboard />
               Copiar nombre

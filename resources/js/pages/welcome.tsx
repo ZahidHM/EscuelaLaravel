@@ -58,7 +58,7 @@ export default function Welcome() {
                         <div className="flex-1 rounded-br-lg rounded-bl-lg bg-white p-6 pb-12 text-[13px] leading-[20px] shadow-[inset_0px_0px_0px_1px_rgba(26,26,0,0.16)] lg:rounded-tl-lg lg:rounded-br-none lg:p-20 dark:bg-[#161615] dark:text-[#EDEDEC] dark:shadow-[inset_0px_0px_0px_1px_#fffaed2d]">
                             <h1 className="mb-1 font-medium">PARA INGRESAR AL SISTEMA REGISTRESE O INICIE SESION</h1>
                             <p className="mb-2 text-[#706f6c] dark:text-[#A1A09A]">
-                                Esta es una prueba diseñada por : 
+                                Esta es una prueba diseñada por :
                                 <br />
                                 Zahid Hernandez Mejia
                             </p>
@@ -72,7 +72,7 @@ export default function Welcome() {
                                     <span>
                                         Ver repositorio del proyecto
                                         <a
-                                            href="https://github.com/ZahidHM/FOTON"
+                                            href="https://github.com/ZahidHM/EscuelaLaravel"
                                             target="_blank"
                                             className="ml-1 inline-flex items-center space-x-1 font-medium text-[#f53003] underline underline-offset-4 dark:text-[#FF4433]"
                                         >
@@ -80,10 +80,17 @@ export default function Welcome() {
                                         </a>
                                     </span>
                                 </li>
-            
+                                <span>
+                                    ACCESO AL DASHBOARD
+                                    <br></br>
+                                    Usuario : test@example.com
+                                    <br></br>
+                                    Contraseña : password
+                                </span>
+
                             </ul>
                         </div>
-                    
+
                     </main>
                 </div>
                 <div className="hidden h-14.5 lg:block"></div>

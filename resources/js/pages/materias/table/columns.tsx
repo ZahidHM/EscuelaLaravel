@@ -13,7 +13,7 @@ export type Materia = {
   nombre: string
   horario_inicio: string
   horario_fin: string
-  id_profesor?:string
+  id_profesor?: string
 }
 
 export const columns: ColumnDef<Materia>[] = [
@@ -70,9 +70,7 @@ export const columns: ColumnDef<Materia>[] = [
             <DropdownMenuSeparator />
             <DropdownMenuItem >
               <Link className="flex w-full items-center"
-                href=
-                ""
-              // {route('directions.show', company.id)}
+                href={route('materias.show', materia.id)}
               >
                 <EyeIcon />
                 Ver

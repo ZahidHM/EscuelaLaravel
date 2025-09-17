@@ -34,7 +34,7 @@ const mainNavItems: NavItem[] = [
 const footerNavItems: NavItem[] = [
     {
         title: 'Repositorio',
-        href: 'https://github.com/ZahidHM/FOTON',
+        href: 'https://github.com/ZahidHM/EscuelaLaravel',
         icon: Folder,
     },
 ];

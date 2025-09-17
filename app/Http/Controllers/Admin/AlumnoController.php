@@ -56,7 +56,10 @@ class AlumnoController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $alumno = Alumno::with('materias')->findOrFail($id);
+        return Inertia::render('alumnos/show', [
+            'alumno' => $alumno,
+        ]);
     }
 
     /**

@@ -61,10 +61,9 @@ export const columns: ColumnDef<Profesor>[] = [
           <DropdownMenuContent align="end">
             <DropdownMenuSeparator />
             <DropdownMenuItem >
-              <Link className="flex w-full items-center" 
-              href=
-              ""
-              // {route('directions.show', company.id)}
+              <Link className="flex w-full items-center"
+                href=
+                {route('profesores.show', profesor.id)}
               >
                 <EyeIcon />
                 Ver

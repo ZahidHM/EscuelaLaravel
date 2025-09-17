@@ -39,7 +39,7 @@ class MateriaController extends Controller
             'nombre' => ['required', 'string', 'max:255', 'unique:materias,nombre'],
             'horario_inicio' => ['required',],
             'horario_fin'    => ['required',  'after:horario_inicio'],
-            'id_profesor'    => ['required', 'exists:profesores,id'], 
+            'id_profesor'    => ['required', 'exists:profesores,id'],
         ]);
         Materia::create($validated);
         return redirect()->route('materias.index')->with('success', 'Materia creada correctamente.');
@@ -50,7 +50,10 @@ class MateriaController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $materia = Materia::with('profesor')->findOrFail($id);
+        return Inertia::render('materias/show', [
+            'materia' => $materia,
+        ]);
     }
 
     /**
@@ -75,7 +78,7 @@ class MateriaController extends Controller
             'nombre' => ['required', 'string', 'max:255'],
             'horario_inicio' => ['required',],
             'horario_fin'    => ['required',  'after:horario_inicio'],
-            'id_profesor'    => ['exists:profesores,id'], 
+            'id_profesor'    => ['exists:profesores,id'],
         ]);
         $materia = Materia::findOrFail($id);
 
